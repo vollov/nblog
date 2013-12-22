@@ -1,0 +1,22 @@
+{
+    "name": "nblog-client",
+    "description": "client application for node blog",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "start": "supervisor server.js",
+      "test": "karma start config/karma.conf.js $*"
+    },
+    "dependencies": {
+        "express": "*",
+        "multiparty": "*"
+    },
+    "devDependencies": {
+        "karma-junit-reporter" : "*",    
+        "karma-jasmine" : "*",
+        "karma-ng-scenario" : "*",
+        "karma-coverage": "*",
+        "supertest": "0.3.x",
+        "should": ">= 0.0.1"
+    }
+}

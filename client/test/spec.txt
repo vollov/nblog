@@ -1,0 +1,48 @@
+client views:
+state/template/url
+[
+{public, layout/public.html,''},
+{admin, layout/admin.html,''},
+{public.login, public/login.html, /login},
+{public.home, public/home.html, /},
+{public.about, public/about.html, /about},
+{public.blog, public/blog.html, /blog/:id (GET)},
+{admin.blogs, admin/blog/list.html, /blogs},
+{admin.blog.detail, admin/blog/detail.html, /admin/blog/:id (GET)},
+{admin.blog.add, admin/blog/detail.html, /admin/blog/add (GET)},
+]
+
+server apis:
+GET		public/blogs
+POST	api/blog
+GET		public/blog/:id
+DELETE	api/blog/:id
+PUT		api/blog/:id
+POST	api/blog
+
+
+[0] function library
+spec 0.1 db 
+spec 0.2 redis
+spec 0.3 security
+spec 0.4 midware
+
+[1] home page:
+spec 1.1 home page has public layout, with home/about/login
+spec 1.2 home page contains a list of blogs
+spec 1.3 blog list contains title(20 char) and content brife(200 chars)
+
+[2] login page
+spec 2.1 login page have login form with user and password
+spec 2.2 press login button will
+spec 2.3 form will flash error message form server
+spec 2.4 success login lead to admin layout with blog edit table.
+
+[3] blog edit table page
+spec 3.1 have blog list
+spec 3.2 edit blog
+spec 3.3 delet blog by id.
+spec 3.4 logout
+
+[4] blog view page
+spec 4.1 show blog title and content.
