@@ -28,5 +28,5 @@ app.all('*', midware.header);
 require('./api/auth')(app);
 require('./api/blog')(app);
 
-app.listen(3000, '0.0.0.0');
+app.listen(3002, '0.0.0.0');
 console.log("Express server listening...");
